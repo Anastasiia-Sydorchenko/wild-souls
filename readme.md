@@ -1,0 +1,1 @@
+<h1>This is a boilerplate code for projects</h1>
