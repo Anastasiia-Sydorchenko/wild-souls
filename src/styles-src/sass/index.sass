@@ -18,10 +18,18 @@
 .intro
   height: 95vh
   height: calc(var(--vh, 1vh) * 95)
-  background-image: url('../images/intro-block_bg.png')
   background-size: cover
   background-color: #ed7b49
   position: relative
+
+.webp .intro
+  background-image: url('../images/intro-block_bg.webp')
+
+.jpeg2000 .intro
+  background-image: url('../images/intro-block_bg.jp2')
+
+.no-webp.no-jpeg2000 .intro
+  background-image: url('../images/intro-block_bg.png')
 
 .intro__menu
   padding-top: 35px
