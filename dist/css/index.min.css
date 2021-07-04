@@ -1,1 +1,1 @@
-div{color:red}
+.container{width:100%;margin-right:auto;margin-left:auto}.intro__alert-message{padding:10px 0;background-color:#000;color:#fff;text-align:center;font-size:calc(14px + 2 *(100vw - 320px)/ (1440 - 320))}.intro{background-image:url(../images/intro-block_bgb.jpg)}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}@media (min-width:1600px){.container{max-width:1320px}}

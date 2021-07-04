@@ -1,20 +1,29 @@
 // GENERAL PROJECT STYLES
-html 
-   box-sizing: border-box
+html
+  box-sizing: border-box
 
-* 
-   margin: 0
-   padding: 0
-   outline: 0
-   border: 0 none
-   box-sizing: inherit
+*
+  margin: 0
+  padding: 0
+  outline: 0
+  border: 0 none
+  box-sizing: inherit
 
-*:before, *:after 
-   box-sizing: inherit
+*:before, *:after
+  box-sizing: inherit
 
-body 
-   font-family: sans-serif
-   font-weight: 400
+body
+  font-family: 'Roboto', sans-serif
+  font-weight: 400
+  color: #000000
 
-a 
-   text-decoration: none
+a
+  text-decoration: none
+
+h1, h2, h3, h4
+  margin: 0
+
+.heading-2
+  font-size: calc(25px + 60 *(100vw - 320px) / (1440 - 320))
+  font-weight: 700
+  margin-bottom: 12px
