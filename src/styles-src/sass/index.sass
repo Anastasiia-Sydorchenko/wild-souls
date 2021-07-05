@@ -148,12 +148,268 @@
       font-size: 16px
       line-height: 1.2
 
-//IMG ROTATION
+//PRODUCTS SLIDER
+.products-container
+  padding-top: 50px
+  padding-bottom: 300px
+  background-color: #ed7b49
+  overflow: hidden
+
+#products-slider
+  height: auto
+  margin-left: 45px
+
+  .swiper-slide
+    display: block
+    position: relative
+
+    &:nth-child(odd)
+      margin-top: 145px
+
+    .slide__img-wrapper
+      height: 530px
+      border-radius: 275px
+      display: flex
+      align-items: center
+
+    .slide__img-wrapper-1
+      background-color: #72a080
+
+    .slide__img-wrapper-2
+      background-color: #a95d50
+
+    .slide__img-wrapper-3
+      background-color: #abafd6
+
+    .slide__img-wrapper-4
+      background-color: #fecf6b
+
+    .slide__info
+      position: absolute
+      top: 430px
+
+      .slide__info-title
+        font-size: calc(20px + 16 *(100vw - 320px) / (1440 - 320))
+        font-weight: 700
+        margin-bottom: 10px
+        color: #000000
+
+      .slide__info-price
+        display: block
+        font-size: calc(15px + 6 *(100vw - 320px) / (1440 - 320))
+        font-weight: 700
+        margin-bottom: 20px
+        color: #000000
+
+      .slide__info-btn
+        display: block
+        padding: 10px 45px
+        margin-left: 15px
+        text-transform: uppercase
+        font-size: calc(15px + 3 *(100vw - 320px) / (1440 - 320))
+        border-radius: 35px
+
+      .slide__info-btn-1
+        background-color: #72a080
+
+      .slide__info-btn-2
+        background-color: #a95d50
+
+      .slide__info-btn-3
+        background-color: #abafd6
+
+      .slide__info-btn-4
+        background-color: #fecf6b
+
+//PHYLOSOPHY SECTION
+.philosophy-container
+  width: 100%
+  background-color: #ed7b49
+
+.philosophy
+  display: flex
+  align-items: center
+  padding-top: 90px
+  padding-bottom: 200px
+
+  .philosophy__info
+    max-width: 350px
+
+    .phylosophy__text
+      font-size: 16px
+      margin-top: 15px
+      margin-bottom: 50px
+
+    .phylosophy__btn
+      padding: 5px 65px
+      background-color: #000000
+      color: #ffffff
+      text-transform: uppercase
+      border-radius: 35px
+
+  .philosophy__img-wrapper
+    position: relative
+    width: 100%
+    text-align: center
+    padding-bottom: 65%
+    animation: imgJump 1s linear alternate infinite
+
+    .philosophy__img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: contain
+
+//PRODUCT CART SECTION
+.product-card-container
+  padding-top: 70px
+  width: 100%
+  background-color: #ed7b49
+  margin: auto
+
+.product-card
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.product-card__block
+  position: relative
+  display: flex
+  padding: 95px 35px 170px 165px
+  width: 800px
+  background-color: #be5a4b
+  border-top-right-radius: 220px
+
+  .product-card__block-info
+    display: flex
+    flex-direction: column
+    align-items: start
+
+    .product-card__block-text
+      font-size: 16px
+      margin: 20px 0
+      max-width: 235px
+
+    .heading-3
+      margin-top: 40px
+
+    .product-weight,
+    .product-price
+      display: inline-block
+      font-size: 21px
+
+    .product-card__btn
+      margin-top: 45px
+      display: block
+      background-color: #000000
+      color: #ffffff
+      text-transform: uppercase
+      border-radius: 35px
+      padding: 10px 65px
+
+  .product-card__block-img-wrapper
+    position: absolute
+    bottom: 40px
+    right: 35px
+
+    .product-cart__block-img-hand
+      position: absolute
+      right: 0
+      bottom: 400px
+      animation: handMove 1s ease-in-out alternate infinite
+
+.product-card__nuts-list
+  max-width: 255px
+  margin-right: 260px
+
+  .product-card__nuts-list-call
+    font-size: calc(16px + 5 *(100vw - 320px) / (1440 - 320))
+    text-transform: uppercase
+    margin-bottom: 90px
+
+  .nuts-list__block
+    list-style-type: none
+
+    .nuts-list__item
+      display: block
+      padding-top: 40px
+      padding-bottom: 20px
+      font-size: calc(25px + 15 *(100vw - 320px) / (1440 - 320))
+      font-weight: 700
+      color: #000000
+      border-bottom: 1px solid #000000
+
+      sup
+        font-size: calc(12px + 4 *(100vw - 320px) / (1440 - 320))
+        top: -25px
+        font-weight: 400
+
+.process-container
+  background-color: #f5afb9
+  padding-top: 130px
+  padding-bottom: 90px
+  overflow: hidden
+
+#process-slider
+  position: relative
+
+  .process__note
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translate(-50%, -50%)
+    font-size: 21px
+    text-transform: uppercase
+    width: 105px
+    text-align: center
+
+  .swiper-slide
+    display: flex
+    text-align: center
+    justify-content: space-between
+
+    .swiper-slide__block
+      width: 330px
+
+    .swiper-slide__title
+      font-size: 18px
+      font-weight: 700
+      margin: 25px 0
+
+    .swiper-slide__text
+      font-size: 16px
+
+  .swiper-pagination
+    position: absolute
+    bottom: -50px
+
+  .swiper-pagination-bullet
+    border-radius: 0
+    width: 10px
+    height: 10px
+    background-color: transparent
+    border: 1px solid #000000
+    opacity: 1
+
+  .swiper-pagination-bullet-active
+    background-color: #000000
+
+// 
+//
+// 
+//
+// 
+//
+// 
+//
+//KEYFRAMES ANIMATION
 @keyframes rotation
-	0%
+  0%
     transform: rotate(0deg)
 
-	100%
+  100%
     transform: rotate(359deg)
 
 @keyframes moveInLeft
@@ -164,6 +420,19 @@
   100%
     left: 0
 
+@keyframes imgJump
+  0%
+    transform: translate3d(0,0,0)
+
+  100%
+    transform: translate3d(0,2%,0)
+
+@keyframes handMove
+  0%
+    transform: rotate(10deg)
+
+  100%
+    transform: rotate(-10deg)
 
 //MEDIA QUERIES FOR CONTAINER (mobile-first)
 @media (min-width: 576px)
