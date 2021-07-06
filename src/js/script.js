@@ -32,6 +32,16 @@ const processSlider = new Swiper('#process-slider', {
   },
 });
 
+//RECIPES SLIDER
+const recipesSlider = new Swiper('#recipes-slider', {
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 30,
+  lazyLoading: true,
+  speed: 1000,
+});
+
+
 //100VH MOBILE FIX
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);

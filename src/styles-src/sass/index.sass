@@ -263,7 +263,7 @@
       height: 100%
       object-fit: contain
 
-//PRODUCT CART SECTION
+//PRODUCT CART (ALMOND)
 .product-card-container
   padding-top: 70px
   width: 100%
@@ -439,10 +439,266 @@
     text-transform: uppercase
     border-radius: 35px
 
-//
-// 
-//
-// 
+.store__img-wrapper
+  animation: imgJump 1s linear alternate infinite
+
+//PRODUCT CARD (HALVA)
+.product-card-2-container
+  background-color: #f5afb9
+
+.products-card-2
+  display: flex
+  justify-content: space-between
+
+  .product-card-2__block
+    position: relative
+    width: 800px
+    background-color: #abafd6
+    border-top-right-radius: 220px
+    padding: 100px 95px 90px 165px
+
+  .product-card-2__subheading
+    display: block
+    margin: 50px 0
+    font-weight: 700
+    font-size: calc(25px + 17 *(100vw - 320px) / (1440 - 320))
+
+  .product-card-2__text
+    font-size: 16px
+    margin-top: 15px
+    margin-bottom: 50px
+    width: 245px
+
+  .product-weight,
+  .product-price
+    display: inline-block
+    font-size: 21px
+
+  .product-card-2__btn
+    display: inline-block
+    margin-top: 45px
+    padding: 5px 65px
+    background-color: #000
+    color: #fff
+    text-transform: uppercase
+    border-radius: 35px
+
+  .product-card-2__img
+    position: absolute
+    bottom: 90px
+    right: 95px
+
+.gift-card
+  width: 445px
+  margin-right: 165px
+  background-color: #ec4844
+  padding: 60px 45px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+
+  .gift-card__title
+    display: block
+    margin: 50px 0
+    font-weight: 700
+    font-size: calc(25px + 17 *(100vw - 320px) / (1440 - 320))
+
+  .gift-card__btn
+    display: inline-block
+    padding: 10px 75px
+    background-color: #000
+    color: #fff
+    text-transform: uppercase
+    border-radius: 35px
+
+//TREASURES SECTION
+.treasures-container
+  background-color: #f5afb9
+  padding-top: 250px
+  padding-bottom: 200px
+  position: relative
+
+.treasures
+  display: flex
+  align-items: center
+
+.treasures__notice-img
+  position: absolute
+  top: 130px
+  left: 345px
+
+  .img-rotate
+    animation: rotation 15s infinite linear
+
+  .treasures__notice-img-inner
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+
+.treasures__info
+  margin-left: 165px
+
+  .treasures__text
+    font-size: 16px
+    margin-top: 15px
+    margin-bottom: 50px
+
+  .treasures__btn
+    display: inline-block
+    padding: 5px 65px
+    background-color: #000
+    color: #fff
+    text-transform: uppercase
+    border-radius: 35px
+
+.treasures__img-wrapper
+  animation: imgJump 1s linear alternate infinite
+
+// RECIPES SECTION
+.recipes-container
+  background-color: #f5afb9
+  padding-top: 200px
+  padding-bottom: 300px
+
+.recipes__info
+  width: 500px
+  margin-right: 300px
+  margin-left: auto
+  margin-bottom: 200px
+
+  .recipes__text
+    font-size: 16px
+    margin-top: 35px
+
+#recipes-slider
+  margin: 0 20px
+  .recipes__img-wrapper
+    position: relative
+    width: 100%
+    text-align: center
+    padding-bottom: 100%
+
+    .recipes__img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: contain
+
+  .swiper-slide
+    &:nth-child(even)
+      margin-top: 50px
+
+    .recipe__note
+      display: block
+      margin-top: 40px
+      margin-bottom: 25px
+      text-transform: uppercase
+      font-size: 16px
+
+    .recipe__name
+      font-size: calc(25px + 17 *(100vw - 320px) / (1440 - 320))
+      font-weight: 700
+
+//FOOTER
+.footer-container
+  background-color: #be5a4b
+  padding-top: 125px
+  padding-bottom: 50px
+  overflow: hidden
+
+.footer__logo
+  text-align: center
+  margin-bottom: 100px
+
+.footer__main
+  margin: 0 150px 100px 150px
+  display: flex
+  justify-content: space-between
+
+.footer__contacts
+  width: 445px
+
+.footer__subscribe
+  margin-bottom: 115px
+
+.footer__subscribe-email
+  background-color: transparent
+  padding: 25px 0 10px 0
+  border-bottom: 1px solid #000000
+  width: 100%
+
+  &::placeholder
+    color: #000000
+    font-size: 12px
+
+.footer__follow-message
+  font-size: calc(18px + 14 *(100vw - 320px) / (1440 - 320))
+
+.footer__follow-socials
+  margin-top: 20px
+  margin-bottom: 60px
+
+  .instagram
+    margin-right: 20px
+
+.footer__payment
+  display: flex
+  margin-bottom: 20px
+
+  .footer__payment-method
+    margin-right: 15px
+
+.footer__copyright
+  .footer__copyright-text
+    display: block
+    font-size: 12px
+
+.footer__menu
+  display: flex
+
+.footer__menu-block
+  width: 285px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+  .footer__menu-list
+    list-style-type: none
+
+  .footer__menu-item-title,
+  .footer__menu-contacts-title
+    font-size: calc(18px + 14 *(100vw - 320px) / (1440 - 320))
+    font-weight: 700
+
+  .footer__menu-item
+    display: block
+    color: #000000
+    margin-top: 20px
+    text-transform: uppercase
+    font-size: 16px
+
+  .footer__menu-contacts-email,
+  .footer__menu-contacts-tel
+    display: block
+    color: #000000
+    margin-top: 20px
+    font-size: 16px
+
+.footer__bottom
+  margin: 0 20px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  
+
+
+
+
+
 //
 // 
 //
