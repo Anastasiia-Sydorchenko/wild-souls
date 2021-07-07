@@ -20,6 +20,7 @@
   height: calc(var(--vh, 1vh) * 95)
   background-size: cover
   background-color: #ed7b49
+  background-position: center center
   position: relative
 
 .webp .intro
@@ -42,6 +43,8 @@
     display: flex
 
   .intro__menu-item
+    display: block
+    position: relative
     color: #000000
     text-transform: uppercase
     font-size: 15px
@@ -50,6 +53,22 @@
     &:last-child
       margin-right: 0
 
+    &::after
+      position: absolute
+      top: 20px
+      left: 50%
+      right: 50%
+      height: 2px
+      content: " "
+      background-color: #000000
+      opacity: .3
+      transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+      transform: translate3d(0, 0, 0)
+
+    &:hover::after
+      left: 0
+      right: 0
+      
   .intro__menu-item-lang
     margin-right: 0
 
@@ -100,7 +119,7 @@
         color: #f5afb9
         transition: .3s
 
-  .to-down-btn
+  .scroll-down-btn
     display: flex
     align-items: center
     justify-content: center
@@ -129,9 +148,6 @@
   .notice__img
     position: relative
 
-    .img-rotate
-      animation: rotation 15s infinite linear
-
     .notice__img-inner
       position: absolute
       top: 50%
@@ -144,9 +160,6 @@
 
   .notice__info
     max-width: 490px
-    .notice__info-text
-      font-size: 16px
-      line-height: 1.2
 
 //PRODUCTS SLIDER
 .products-container
@@ -167,11 +180,12 @@
       margin-top: 145px
 
     .slide__img-wrapper
-      width: 360px
+      width: 100%
       height: 530px
       border-radius: 275px
       display: flex
       align-items: center
+      justify-content: center
 
     .slide__img-wrapper-1
       background-color: #72a080
@@ -186,8 +200,14 @@
       background-color: #fecf6b
 
     .slide__info
+      height: 190px
+      width: 90%
       position: absolute
       top: 430px
+      display: flex
+      flex-direction: column
+      align-items: start
+      justify-content: center
 
       .slide__info-title
         font-size: calc(20px + 16 *(100vw - 320px) / (1440 - 320))
@@ -209,6 +229,14 @@
         text-transform: uppercase
         font-size: calc(15px + 3 *(100vw - 320px) / (1440 - 320))
         border-radius: 35px
+        cursor: pointer
+        transition-duration: 0.3s
+        transition-property: transform
+        transform: translateZ(0)
+        box-shadow: 0 0 1px transparent
+
+        &:hover
+          animation: buttonPulse 1s linear infinite
 
       .slide__info-btn-1
         background-color: #72a080
@@ -235,18 +263,6 @@
 
   .philosophy__info
     max-width: 350px
-
-    .phylosophy__text
-      font-size: 16px
-      margin-top: 15px
-      margin-bottom: 50px
-
-    .phylosophy__btn
-      padding: 5px 65px
-      background-color: #000000
-      color: #ffffff
-      text-transform: uppercase
-      border-radius: 35px
 
   .philosophy__img-wrapper
     position: relative
@@ -289,7 +305,6 @@
     align-items: start
 
     .product-card__block-text
-      font-size: 16px
       margin: 20px 0
       max-width: 235px
 
@@ -303,17 +318,16 @@
 
     .product-card__btn
       margin-top: 45px
-      display: block
-      background-color: #000000
-      color: #ffffff
-      text-transform: uppercase
-      border-radius: 35px
-      padding: 10px 65px
 
   .product-card__block-img-wrapper
     position: absolute
     bottom: 40px
     right: 35px
+    width: 45%
+
+    .product-card__block-img
+      width: 100%
+      height: auto
 
     .product-cart__block-img-hand
       position: absolute
@@ -341,6 +355,10 @@
       font-weight: 700
       color: #000000
       border-bottom: 1px solid #000000
+
+      &:hover
+        color: #ffffff
+        transition: .3s
 
       sup
         font-size: calc(12px + 4 *(100vw - 320px) / (1440 - 320))
@@ -379,9 +397,6 @@
       font-weight: 700
       margin: 25px 0
 
-    .swiper-slide__text
-      font-size: 16px
-
   .swiper-pagination
     position: absolute
     bottom: -50px
@@ -415,9 +430,6 @@
   top: 70px
   left: 345px
 
-  .img-rotate
-    animation: rotation 15s infinite linear
-
   .store__notice-img-inner
     position: absolute
     top: 50%
@@ -427,20 +439,19 @@
 .store__info
   width: 335px
 
-  .store__text
-    font-size: 16px
-    margin-top: 15px
-    margin-bottom: 50px
-
-  .store__btn
-    padding: 5px 65px
-    background-color: #000
-    color: #fff
-    text-transform: uppercase
-    border-radius: 35px
-
 .store__img-wrapper
+  position: relative
+  width: 100%
+  padding-bottom: 65%
   animation: imgJump 1s linear alternate infinite
+
+.store__img
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  object-fit: contain/cover
 
 //PRODUCT CARD (HALVA)
 .product-card-2-container
@@ -464,9 +475,6 @@
     font-size: calc(25px + 17 *(100vw - 320px) / (1440 - 320))
 
   .product-card-2__text
-    font-size: 16px
-    margin-top: 15px
-    margin-bottom: 50px
     width: 245px
 
   .product-weight,
@@ -474,19 +482,13 @@
     display: inline-block
     font-size: 21px
 
-  .product-card-2__btn
-    display: inline-block
-    margin-top: 45px
-    padding: 5px 65px
-    background-color: #000
-    color: #fff
-    text-transform: uppercase
-    border-radius: 35px
-
   .product-card-2__img
     position: absolute
     bottom: 90px
     right: 95px
+
+  .product-card-2__btn
+    margin-top: 45px
 
 .gift-card
   width: 445px
@@ -504,14 +506,6 @@
     font-weight: 700
     font-size: calc(25px + 17 *(100vw - 320px) / (1440 - 320))
 
-  .gift-card__btn
-    display: inline-block
-    padding: 10px 75px
-    background-color: #000
-    color: #fff
-    text-transform: uppercase
-    border-radius: 35px
-
 //TREASURES SECTION
 .treasures-container
   background-color: #f5afb9
@@ -528,9 +522,6 @@
   top: 130px
   left: 345px
 
-  .img-rotate
-    animation: rotation 15s infinite linear
-
   .treasures__notice-img-inner
     position: absolute
     top: 50%
@@ -540,21 +531,19 @@
 .treasures__info
   margin-left: 165px
 
-  .treasures__text
-    font-size: 16px
-    margin-top: 15px
-    margin-bottom: 50px
-
-  .treasures__btn
-    display: inline-block
-    padding: 5px 65px
-    background-color: #000
-    color: #fff
-    text-transform: uppercase
-    border-radius: 35px
-
 .treasures__img-wrapper
+  position: relative
+  width: 100%
+  padding-bottom: 55%
   animation: imgJump 1s linear alternate infinite
+
+.treasures__img
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  object-fit: contain/cover
 
 // RECIPES SECTION
 .recipes-container
@@ -569,11 +558,11 @@
   margin-bottom: 200px
 
   .recipes__text
-    font-size: 16px
     margin-top: 35px
 
 #recipes-slider
   margin: 0 20px
+
   .recipes__img-wrapper
     position: relative
     width: 100%
@@ -589,6 +578,8 @@
       object-fit: contain
 
   .swiper-slide
+    color: #000000
+
     &:nth-child(even)
       margin-top: 50px
 
@@ -602,6 +593,9 @@
     .recipe__name
       font-size: calc(25px + 17 *(100vw - 320px) / (1440 - 320))
       font-weight: 700
+
+      &:hover
+        color: #00000095
 
 //FOOTER
 .footer-container
@@ -626,7 +620,7 @@
   margin-bottom: 115px
 
 .footer__subscribe-email
-  background-color: transparent
+  background-color: #be5a4b
   padding: 25px 0 10px 0
   border-bottom: 1px solid #000000
   width: 100%
@@ -694,14 +688,6 @@
   justify-content: space-between
   align-items: center
   
-
-
-
-
-
-//
-// 
-//
 //KEYFRAMES ANIMATION
 @keyframes rotation
   0%
@@ -717,6 +703,12 @@
 @keyframes moveInRight
   100%
     left: 0
+
+@keyframes buttonPulse
+  0%
+    transform: scale(1.1)
+  100%
+    transform: scale(0.9)
 
 @keyframes imgJump
   0%

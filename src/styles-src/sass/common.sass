@@ -32,3 +32,30 @@ h1, h2, h3, h4
   font-size: calc(20px + 22 *(100vw - 320px) / (1440 - 320))
   font-weight: 700
   margin-bottom: 12px
+
+.main-text
+  font-size: 16px
+  line-height: 1.2
+  margin-top: 15px
+  margin-bottom: 50px
+
+.main-btn
+  display: inline-block
+  background-color: #000
+  color: #fff
+  text-transform: uppercase
+  border-radius: 35px
+  padding: 10px 55px
+  text-align: center
+  transition-duration: 0.3s
+  transition-property: transform
+  transform: translateZ(0)
+  box-shadow: 0 0 1px transparent
+
+  &:hover
+    transform: scale(1.1)
+
+
+.img-rotate
+  animation: rotation 15s infinite linear
+
