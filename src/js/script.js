@@ -36,7 +36,7 @@ const processSlider = new Swiper('#process-slider', {
   slidesPerView: 1,
   spaceBetween: 240,
   lazyLoading: true,
-  speed: 1000,
+  speed: 1500,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -59,6 +59,24 @@ $(function () {
     return false;
   });
 });
+
+
+//BURGER MENU 
+let burgerMenuButton = document.querySelector('.intro__burger-menu');
+
+burgerMenuButton.onclick = function () {
+  showMobileMenu();
+}
+
+function showMobileMenu () {
+  burgerMenuButton.classList.toggle('active');
+
+  let mobileMenu = document.querySelector('.intro__mobile-menu');
+  mobileMenu.classList.toggle('active');
+
+  let body = document.querySelector('body');
+  body.classList.toggle('lock');
+}
 
 //COOKIES BTN
 let cookiesBlock = document.querySelector('.intro__cookies');
@@ -99,28 +117,6 @@ $(window).scroll(function() {
     });
   };
 });
-
-
-
-// $('.nuts-list__item-counter').each(function() {
-//   var $this = $(this),
-//   countTo = $this.attr('data-count');
-  
-//   $({ countNum: $this.text()}).animate({
-//     countNum: countTo
-//   },
-
-//   {
-//     duration: 8000,
-//     easing:'linear',
-//     step: function() {
-//       $this.text(Math.floor(this.countNum));
-//     },
-//     complete: function() {
-//       $this.text(this.countNum);
-//     }
-//   });  
-// });
 
 //100VH MOBILE FIX
 let vh = window.innerHeight * 0.01;
