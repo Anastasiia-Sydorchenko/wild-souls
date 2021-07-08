@@ -6,26 +6,30 @@ SwiperCore.use([Navigation, Pagination]);
 //PRODUCTS SLIDER
 const productsSlider = new Swiper('#products-slider', {
   loop: true,
-  slidesPerView: 1,
-  spaceBetween: 10,
+  slidesPerView: 1.2,
+  spaceBetween: 20,
   lazyLoading: true,
   speed: 1000,
   breakpoints: {
-    // when window width is >= 480px
-    480: {
-      slidesPerView: 2,
+    400: {
+      slidesPerView: 1.5,
+      spaceBetween: 10,
     },
-    // when window width is >= 640px
-    640: {
+    650: {
       slidesPerView: 2.5,
+      spaceBetween: 10,
+    },
+    776: {
+      slidesPerView: 3,
       spaceBetween: 20,
     },
-    1280: {
+    991: {
       slidesPerView: 3.5,
       spaceBetween: 30,
     },
     1800: {
       slidesPerView: 4.5,
+      spaceBetween: 50,
     }
   }
 });
@@ -46,10 +50,18 @@ const processSlider = new Swiper('#process-slider', {
 //RECIPES SLIDER
 const recipesSlider = new Swiper('#recipes-slider', {
   loop: true,
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
   lazyLoading: true,
   speed: 1000,
+  breakpoints: {
+    650: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    }
+  }
 });
 
 //SCROLL DOWN BTN
@@ -59,7 +71,6 @@ $(function () {
     return false;
   });
 });
-
 
 //BURGER MENU 
 let burgerMenuButton = document.querySelector('.intro__burger-menu');

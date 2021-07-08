@@ -47,7 +47,7 @@
     position: relative
     color: #000000
     text-transform: uppercase
-    font-size: 15px
+    font-size: calc(13px + 2 *(100vw - 320px) / (1440 - 320))
     margin-right: 45px
 
     &:last-child
@@ -172,10 +172,11 @@
 .notice-container
   background-color: #ed7b49
   padding: 70px 0
+  display: flex
+  justify-content: center
 
 .notice
   max-width: 850px
-  margin: auto
   display: flex
   justify-content: space-between
   align-items: center
@@ -194,7 +195,11 @@
       font-size: 75px
 
   .notice__info
-    max-width: 490px
+    max-width: 500px
+    margin-left: 50px
+
+    .heading-2
+      white-space: nowrap
 
 //PRODUCTS SLIDER
 .products-container
@@ -297,11 +302,11 @@
   padding-bottom: 200px
 
   .philosophy__info
-    max-width: 350px
+    width: 50%
 
   .philosophy__img-wrapper
     position: relative
-    width: 100%
+    width: 50%
     text-align: center
     padding-bottom: 65%
     animation: imgJump 1s linear alternate infinite
@@ -323,28 +328,33 @@
 
 .product-card
   display: flex
-  justify-content: space-between
   align-items: center
 
 .product-card__block
   position: relative
   display: flex
   padding: 95px 35px 170px 165px
-  width: 800px
+  width: 60%
   background-color: #be5a4b
   border-top-right-radius: 220px
+  display: flex
+  flex-direction: column
+  align-items: start
+  justify-content: center
 
   .product-card__block-info
     display: flex
     flex-direction: column
     align-items: start
+    width: 60%
 
     .product-card__block-text
       margin: 20px 0
-      max-width: 235px
+      width: 60%
 
     .heading-3
       margin-top: 40px
+      white-space: nowrap
 
     .product-weight,
     .product-price
@@ -358,7 +368,7 @@
     position: absolute
     bottom: 40px
     right: 35px
-    width: 45%
+    width: 30%
 
     .product-card__block-img
       width: 100%
@@ -371,8 +381,9 @@
       animation: handMove 1s ease-in-out alternate infinite
 
 .product-card__nuts-list
-  max-width: 255px
-  margin-right: 260px
+  width: 20%
+  margin-left: 10%
+  margin-right: 10%
 
   .product-card__nuts-list-call
     font-size: calc(16px + 5 *(100vw - 320px) / (1440 - 320))
@@ -451,18 +462,17 @@
 .store-container
   background-color: #f5afb9
   position: relative
-  padding-top: 210px
+  padding-top: 250px
   padding-bottom: 220px
 
 .store
-  margin-left: 165px
   display: flex
   align-items: center
   justify-content: space-between
 
 .store__notice-img
   position: absolute
-  top: 70px
+  top: 0
   left: 345px
 
   .store__notice-img-inner
@@ -472,12 +482,12 @@
     transform: translate(-50%,-50%)
 
 .store__info
-  width: 335px
+  width: 50%
 
 .store__img-wrapper
   position: relative
-  width: 100%
-  padding-bottom: 65%
+  width: 50%
+  padding-bottom: 45%
   animation: imgJump 1s linear alternate infinite
 
 .store__img
@@ -498,10 +508,14 @@
 
   .product-card-2__block
     position: relative
-    width: 800px
+    width: 60%
     background-color: #abafd6
     border-top-right-radius: 220px
     padding: 100px 95px 90px 165px
+    display: flex
+    flex-direction: column
+    align-items: start
+    justify-content: center
 
   .product-card-2__subheading
     display: block
@@ -510,7 +524,7 @@
     font-size: calc(25px + 17 *(100vw - 320px) / (1440 - 320))
 
   .product-card-2__text
-    width: 245px
+    width: 60%
 
   .product-weight,
   .product-price
@@ -519,15 +533,17 @@
 
   .product-card-2__img
     position: absolute
-    bottom: 90px
-    right: 95px
+    bottom: 100px
+    right: 35px
+    width: 25%
 
   .product-card-2__btn
     margin-top: 45px
 
 .gift-card
-  width: 445px
-  margin-right: 165px
+  width: 30%
+  margin-left: 5%
+  margin-right: 5%
   background-color: #ec4844
   padding: 60px 45px
   display: flex
@@ -540,6 +556,7 @@
     margin: 50px 0
     font-weight: 700
     font-size: calc(25px + 17 *(100vw - 320px) / (1440 - 320))
+    text-align: center
 
 //TREASURES SECTION
 .treasures-container
@@ -554,7 +571,7 @@
 
 .treasures__notice-img
   position: absolute
-  top: 130px
+  top: 40px
   left: 345px
 
   .treasures__notice-img-inner
@@ -564,12 +581,12 @@
     transform: translate(-50%,-50%)
 
 .treasures__info
-  margin-left: 165px
+  width: 50%
 
 .treasures__img-wrapper
   position: relative
-  width: 100%
-  padding-bottom: 55%
+  width: 50%
+  padding-bottom: 45%
   animation: imgJump 1s linear alternate infinite
 
 .treasures__img
@@ -587,8 +604,8 @@
   padding-bottom: 300px
 
 .recipes__info
-  width: 500px
-  margin-right: 300px
+  width: 40%
+  margin-right: 20%
   margin-left: auto
   margin-bottom: 200px
 
@@ -649,7 +666,7 @@
   justify-content: space-between
 
 .footer__contacts
-  width: 445px
+  width: 35%
 
 .footer__subscribe
   margin-bottom: 115px
@@ -688,9 +705,11 @@
 
 .footer__menu
   display: flex
+  justify-content: end
+  width: 60%
 
 .footer__menu-block
-  width: 285px
+  width: 40%
   display: flex
   flex-direction: column
   justify-content: space-between
@@ -789,7 +808,10 @@
     max-width: 1320px
 
 //MEDIA QUERIES  
-//@media (min-width: 1800px)
+@media (min-width: 1800px)
+  .img-rotate
+    width: 300px
+    height: 300px
 
 //@media (min-width: 1399px)
 
@@ -797,7 +819,26 @@
   .intro__menu
     margin-left: 30px
 
-//@media (max-width: 1025px)
+  .product-card__block,
+  .products-card-2 .product-card-2__block
+    padding: 50px 40px 50px 100px
+
+@media (max-width: 1025px)
+  #products-slider
+    .swiper-slide
+      .slide__info
+        top: 300px
+
+      .slide__img-wrapper
+        height: 350px
+        width: 230px
+
+        .slide__img
+          width: 250px
+
+  .img-rotate
+    width: 200px
+    height: 200px
 
 @media (max-width: 991px)
   .intro__menu
@@ -807,6 +848,57 @@
     .intro__logo-img
       width: 100px
       height: auto
+
+  .notice
+    margin: 0 20px
+    max-width: 650px
+
+    .notice__img
+      .notice__img-inner
+        font-size: calc(40px + 35 * ((100vw - 320px) / (1440 - 320))
+
+  #products-slider
+    .swiper-slide
+      &:nth-child(odd)
+        margin-top: 100px
+
+  .product-card
+    padding-bottom: 50px
+
+  .product-card__block
+    padding: 50px 40px 50px 100px
+
+    .product-card__block-info
+      width: 100%
+
+    .product-card__block-img-wrapper
+      .product-card__block-img
+        display: none
+
+      .product-cart__block-img-hand
+        bottom: 250px
+
+  .product-card__nuts-list
+    width: 30%
+    margin-left: 5%
+    margin-right: 5%
+
+    .product-card__nuts-list-call
+      margin-bottom: 0
+
+  .products-card-2 
+    .product-card-2__img-wrapper
+      display: none
+    
+    .product-card-2__block
+      padding: 50px
+      width: 50%
+
+  .gift-card
+    width: 40%
+
+  .footer__main
+    margin: 0 50px 100px 50px
 
 @media (max-width: 768px)
   .intro__content
@@ -912,23 +1004,164 @@
   .mobile-menu__list
     display: block
 
-//@media (max-width: 575px)
+  #products-slider
+    .swiper-slide
 
+      &:nth-child(odd)
+        margin-top: 80px
+
+  .philosophy
+    .philosophy__info
+      width: 100%
+      text-align: center
+
+    .philosophy__img-wrapper
+      display: none
+
+  .product-card
+    flex-direction: column
+
+  .product-card__block
+    width: 100%
+
+    .product-card__block-img-wrapper
+      .product-cart__block-img-hand
+        bottom: 200px
+        width: 70px
+
+  .product-card__nuts-list
+    width: 80%
+    text-align: center
+    margin-top: 50px
+
+    .nuts-list__block
+      .nuts-list__item
+        display: inline-block
+
+  #process-slider
+    .swiper-slide
+      margin-top: 70px
+      flex-direction: column
+      align-items: center
+
+  .store__img-wrapper
+    display: none
+
+  .store__info
+    width: 100%
+    text-align: center
+
+  .store__notice-img
+    left: 50%
+    transform: translate(-50%, 0)
+
+  .treasures__img-wrapper
+    display: none
+
+  .treasures__info
+    width: 100%
+    text-align: center
+
+  .treasures__notice-img
+    left: 50%
+    transform: translate(-50%, 0)
+
+  .recipes__info
+    width: 80%
+    margin: auto
+
+  #recipes-slider
+    .swiper-slide
+      &:nth-child(even)
+        margin-top: 0
+
+  .footer__menu
+    display: none
+
+  .footer__contacts
+    width: 100%
+
+    .heading-2
+      text-align: center
+
+  .footer__follow-message
+    display: block
+    text-align: center
+
+  .footer__follow-socials,
+  .footer__copyright,
+  .footer__payment
+    display: flex
+    justify-content: center
+
+  .footer__bottom
+    display: none
+
+  .products-card-2
+    flex-direction: column
+    align-items: center
+
+    .product-card-2__block
+      width: 100%
+      padding: 50px 40px 50px 100px
+
+  .gift-card
+    width: 80%
+    margin-top: 50px
+
+@media (max-width: 700px)
+  .img-rotate
+    width: 150px
+    height: 150px
+
+  .notice
+    max-width: 650px
+
+@media (max-width: 574px)
+  .gift-card
+    padding: 20px
+    
+  .gift-card__img-icon
+    width: 100px
+  
 @media (max-width: 479px)
   .intro__menu
     .intro__logo-img
       width: 80px
 
+  .notice
+    flex-direction: column
+    align-items: center
+
+    .notice__info
+      margin-left: 0
+      margin-top: 30px
+      text-align: center
+
+  #products-slider
+    .swiper-slide
+      .slide__info
+        top: 250px
+
+      &:nth-child(odd)
+        margin-top: 0
+
+  .product-card__block,
+  .products-card-2 .product-card-2__block
+    padding-left: 30px
+
+
+
 //@media (max-width: 374px)
 
 //MEDIA QUERIES FOR LANDSCAPE  
 @media screen and (min-width:320px) and (max-width:991px) and (orientation: landscape)
-  .intro__menu 
+  .intro__menu
     .intro__logo-img
       width: 60px
 
   .intro__content
-    .intro__heading 
+    .intro__heading
       display: none
 
     .intro__cookies
