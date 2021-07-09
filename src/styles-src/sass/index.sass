@@ -1,10 +1,10 @@
-//MAIN PAGE STYLES
+// ===== MAIN PAGE STYLES ===================================
 .container
   width: 100%
   margin-right: auto
   margin-left: auto
 
-//INTRO SECTION
+//INTRO SECTION ===================================
 .intro__alert-message
   display: flex
   align-items: center
@@ -72,7 +72,7 @@
   .intro__menu-item-lang
     margin-right: 0
 
-// MOBILE MENU 
+// ===== MOBILE MENU ===================================
 .intro__burger-menu,
 .intro__mobile-menu
   display: none
@@ -148,27 +148,29 @@
         color: #f5afb9
         transition: .3s
 
-  .scroll-down-btn
-    display: flex
-    align-items: center
-    justify-content: center
+  .scroll-down-btn-wrapper
     position: absolute
     bottom: 10px
     left: 50%
-    transform: translateX(-50%)
-    background-color: #000000
-    border-radius: 50%
-    height: 80px
-    width: 80px
-    transition-duration: 0.3s
-    transition-property: transform
-    transform: translateZ(0)
-    box-shadow: 0 0 1px transparent
+    transform: translate(-50%, 0)
 
-    &:hover
-      transform: scale(1.1)
+    .scroll-down-btn
+      display: flex
+      align-items: center
+      justify-content: center
+      background-color: #000000
+      border-radius: 50%
+      height: 80px
+      width: 80px
+      transition-duration: 0.3s
+      transition-property: transform
+      transform: translateZ(0)
+      box-shadow: 0 0 1px transparent
 
-//NOTICE SECTION
+      &:hover
+        transform: scale(1.1)
+
+// ===== NOTICE SECTION ===================================
 .notice-container
   background-color: #ed7b49
   padding: 70px 0
@@ -201,7 +203,7 @@
     .heading-2
       white-space: nowrap
 
-//PRODUCTS SLIDER
+//PRODUCTS SLIDER ===================================
 .products-container
   padding-top: 50px
   padding-bottom: 300px
@@ -290,7 +292,7 @@
       .slide__info-btn-4
         background-color: #fecf6b
 
-//PHYLOSOPHY SECTION
+// ===== PHYLOSOPHY SECTION ===================================
 .philosophy-container
   width: 100%
   background-color: #ed7b49
@@ -319,7 +321,7 @@
       height: 100%
       object-fit: contain
 
-//PRODUCT CART (ALMOND)
+// ===== PRODUCT CART (ALMOND) ===================================
 .product-card-container
   padding-top: 70px
   width: 100%
@@ -411,6 +413,7 @@
         top: -25px
         font-weight: 400
 
+// ===== PROCESS SLIDER ===================================
 .process-container
   background-color: #f5afb9
   padding-top: 130px
@@ -458,7 +461,7 @@
   .swiper-pagination-bullet-active
     background-color: #000000
 
-//CONCEPT STORE SECTION
+// ===== CONCEPT STORE SECTION ===================================
 .store-container
   background-color: #f5afb9
   position: relative
@@ -498,7 +501,7 @@
   height: 100%
   object-fit: contain/cover
 
-//PRODUCT CARD (HALVA)
+// ===== PRODUCT CARD (HALVA) ===================================
 .product-card-2-container
   background-color: #f5afb9
 
@@ -558,7 +561,7 @@
     font-size: calc(25px + 17 *(100vw - 320px) / (1440 - 320))
     text-align: center
 
-//TREASURES SECTION
+// ===== TREASURES SECTION ===================================
 .treasures-container
   background-color: #f5afb9
   padding-top: 250px
@@ -597,7 +600,7 @@
   height: 100%
   object-fit: contain/cover
 
-// RECIPES SECTION
+// ===== RECIPES SECTION ===================================
 .recipes-container
   background-color: #f5afb9
   padding-top: 200px
@@ -625,7 +628,7 @@
       position: absolute
       top: 0
       left: 0
-      width: 100%
+      width: 80%
       height: 100%
       object-fit: contain
 
@@ -640,7 +643,7 @@
       margin-top: 40px
       margin-bottom: 25px
       text-transform: uppercase
-      font-size: 16px
+      font-size: calc(14px + 2 *(100vw - 320px) / (1440 - 320))
 
     .recipe__name
       font-size: calc(25px + 17 *(100vw - 320px) / (1440 - 320))
@@ -649,7 +652,7 @@
       &:hover
         color: #00000095
 
-//FOOTER
+// ===== FOOTER ===================================
 .footer-container
   background-color: #be5a4b
   padding-top: 125px
@@ -701,7 +704,7 @@
 .footer__copyright
   .footer__copyright-text
     display: block
-    font-size: 12px
+    font-size: calc(14px + 2 *(100vw - 320px) / (1440 - 320))
 
 .footer__menu
   display: flex
@@ -727,7 +730,7 @@
     color: #000000
     margin-top: 20px
     text-transform: uppercase
-    font-size: 16px
+    font-size: calc(14px + 2 *(100vw - 320px) / (1440 - 320))
 
     &:hover
       color: #ffffff
@@ -787,6 +790,10 @@
     transform: rotate(-10deg)
 
 //MEDIA QUERIES FOR CONTAINER (mobile-first)
+@media (min-width: 320px)
+  .container
+    max-width: 300px
+
 @media (min-width: 576px)
   .container
     max-width: 540px
@@ -813,9 +820,11 @@
     width: 300px
     height: 300px
 
-//@media (min-width: 1399px)
+  .main-text
+    font-size: 22px
 
 @media (max-width: 1199px)
+  //INTRO SECTION
   .intro__menu
     margin-left: 30px
 
@@ -823,7 +832,16 @@
   .products-card-2 .product-card-2__block
     padding: 50px 40px 50px 100px
 
+  .product-card__nuts-list 
+    .product-card__nuts-list-call
+      margin-bottom: 0
+
 @media (max-width: 1025px)
+  .img-rotate
+    width: 200px
+    height: 200px
+
+  //PRODUCTS SLIDER
   #products-slider
     .swiper-slide
       .slide__info
@@ -836,11 +854,40 @@
         .slide__img
           width: 250px
 
-  .img-rotate
-    width: 200px
-    height: 200px
+  .products-container
+    padding-bottom: 200px
+
+  //PHILOSOPHY SECTION
+  .philosophy
+    padding: 0
+
+  //CONCEPT STORE SECTION 
+  .store-container
+    padding-bottom: 150px
+
+  //TREASURES SECTION
+  .treasures-container
+    padding-bottom: 100px
+
+  //RECIPES SECTION
+  .recipes-container
+    padding: 50px 0
+
+  .recipes__info
+    margin-bottom: 100px
+
+  //FOOTER
+  .footer-container
+    padding: 50px 0
+
+  .footer__logo
+    margin-bottom: 70px
+
+  .footer__main
+    margin: 0 50px 70px 50px
 
 @media (max-width: 991px)
+  //INTRO SECTION
   .intro__menu
     .intro__menu-item
       margin-right: 25px
@@ -857,11 +904,13 @@
       .notice__img-inner
         font-size: calc(40px + 35 * ((100vw - 320px) / (1440 - 320))
 
+  //PRODUCTS SLIDER
   #products-slider
     .swiper-slide
       &:nth-child(odd)
         margin-top: 100px
 
+  // PRODUCT CARD 1 SECTION (ALMOND)
   .product-card
     padding-bottom: 50px
 
@@ -886,6 +935,7 @@
     .product-card__nuts-list-call
       margin-bottom: 0
 
+  //PRODUCT CARD 2 SECTION (HALVA)
   .products-card-2 
     .product-card-2__img-wrapper
       display: none
@@ -897,10 +947,12 @@
   .gift-card
     width: 40%
 
+  //FOOTER
   .footer__main
     margin: 0 50px 100px 50px
 
 @media (max-width: 768px)
+  //INTRO
   .intro__content
     .intro__heading
       padding-top: 30px
@@ -908,9 +960,10 @@
     .intro__cookies
       display: none
 
-    .scroll-down-btn
-      height: 60px
-      width: 60px
+    .scroll-down-btn-wrapper
+      .scroll-down-btn
+        height: 60px
+        width: 60px
 
   .intro__menu
     display: flex
@@ -920,7 +973,7 @@
     .mobile-hidden
       display: none
 
-  // MOBILE MENU
+  //MOBILE MENU
   .intro__burger-menu,
   .intro__mobile-menu
     display: block
@@ -1004,12 +1057,14 @@
   .mobile-menu__list
     display: block
 
+  //PRODUCTS SLIDER
   #products-slider
     .swiper-slide
 
       &:nth-child(odd)
         margin-top: 80px
 
+  //PHYLOSOPHY SECTION
   .philosophy
     .philosophy__info
       width: 100%
@@ -1018,6 +1073,7 @@
     .philosophy__img-wrapper
       display: none
 
+  //PRODUCT CARD 1 SECTION (ALMOND)
   .product-card
     flex-direction: column
 
@@ -1038,11 +1094,16 @@
       .nuts-list__item
         display: inline-block
 
+  //PROCESS SLIDER
   #process-slider
     .swiper-slide
       margin-top: 70px
       flex-direction: column
       align-items: center
+
+  //CONCEPT STORE SECTION
+  .store-container
+    padding-bottom: 80px
 
   .store__img-wrapper
     display: none
@@ -1055,6 +1116,20 @@
     left: 50%
     transform: translate(-50%, 0)
 
+  //PRODUCT CARD 2 SECTION (HALVA)
+  .products-card-2
+    flex-direction: column
+    align-items: center
+
+    .product-card-2__block
+      width: 100%
+      padding: 50px 40px 50px 100px
+
+  .gift-card
+    width: 80%
+    margin-top: 50px
+
+  //TREASURES SECTION
   .treasures__img-wrapper
     display: none
 
@@ -1066,6 +1141,7 @@
     left: 50%
     transform: translate(-50%, 0)
 
+  //RECIPES SECTION + SLIDER
   .recipes__info
     width: 80%
     margin: auto
@@ -1075,8 +1151,15 @@
       &:nth-child(even)
         margin-top: 0
 
+  //FOOTER
   .footer__menu
     display: none
+
+  .footer__main
+    margin-bottom: 0
+
+  .footer__subscribe
+    margin-bottom: 50px
 
   .footer__contacts
     width: 100%
@@ -1097,18 +1180,6 @@
   .footer__bottom
     display: none
 
-  .products-card-2
-    flex-direction: column
-    align-items: center
-
-    .product-card-2__block
-      width: 100%
-      padding: 50px 40px 50px 100px
-
-  .gift-card
-    width: 80%
-    margin-top: 50px
-
 @media (max-width: 700px)
   .img-rotate
     width: 150px
@@ -1118,13 +1189,91 @@
     max-width: 650px
 
 @media (max-width: 574px)
+  .main-text
+    margin-bottom: 20px
+
+  .notice-container
+    padding-bottom: 30px
+
+  .products-container
+    padding-top: 0
+
+  .product-card__block .product-card__block-info .heading-3
+    margin-top: 0
+
+  .product-card__nuts-list 
+    .nuts-list__block 
+      .nuts-list__item
+        padding-top: 20px
+        padding-bottom: 10px
+
+  //PRODUCT CARD 2 SECTION (HALVA)
   .gift-card
     padding: 20px
     
   .gift-card__img-icon
     width: 100px
   
+  //PROCESS SLIDER
+  .process-container
+    display: none
+
+  //STORE CONCEPT SECTION
+  .store-container
+    padding-top: 200px
+    padding-bottom: 40px
+
+  .store__notice-img
+    top: 30px
+
+  .products-card-2 .product-card-2__subheading
+    margin: 0
+
+  .gift-card 
+    .gift-card__title
+      margin-top: 0
+      margin-bottom: 15px
+
+  .treasures-container
+    padding-top: 200px
+    padding-bottom: 40px
+
+  .recipes__info
+    text-align: center
+
+  .treasures__notice-img
+    top: 30px
+
+  .recipes-container
+    padding: 30px 0
+
+  #recipes-slider 
+    .swiper-slide 
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      .recipe__note
+        margin: 10px 0
+
+    .recipes__img-wrapper
+      padding-bottom: 60%
+
+      .recipes__img
+        width: 100%
+
+  .footer__logo
+    margin-bottom: 20px
+
+    .footer__logo-img
+      width: 100px
+      height: auto
+
+  .footer__follow-socials
+    margin: 20px 0
+
 @media (max-width: 479px)
+  //INTRO SECTION
   .intro__menu
     .intro__logo-img
       width: 80px
@@ -1138,6 +1287,10 @@
       margin-top: 30px
       text-align: center
 
+  //PRODUCTS SLIDER
+  .products-container
+    padding-bottom: 100px
+
   #products-slider
     .swiper-slide
       .slide__info
@@ -1146,16 +1299,16 @@
       &:nth-child(odd)
         margin-top: 0
 
+  //PRODUCT CARD 2 SECTION (HALVA)
   .product-card__block,
   .products-card-2 .product-card-2__block
     padding-left: 30px
-
-
 
 //@media (max-width: 374px)
 
 //MEDIA QUERIES FOR LANDSCAPE  
 @media screen and (min-width:320px) and (max-width:991px) and (orientation: landscape)
+  //INTRO SECTION
   .intro__menu
     .intro__logo-img
       width: 60px

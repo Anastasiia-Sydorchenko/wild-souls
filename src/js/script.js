@@ -30,6 +30,10 @@ const productsSlider = new Swiper('#products-slider', {
     1800: {
       slidesPerView: 4.5,
       spaceBetween: 50,
+    },
+    2200: {
+      slidesPerView: 5.5,
+      spaceBetween: 50,
     }
   }
 });
@@ -38,7 +42,7 @@ const productsSlider = new Swiper('#products-slider', {
 const processSlider = new Swiper('#process-slider', {
   loop: true,
   slidesPerView: 1,
-  spaceBetween: 240,
+  spaceBetween: 1000,
   lazyLoading: true,
   speed: 1500,
   pagination: {
