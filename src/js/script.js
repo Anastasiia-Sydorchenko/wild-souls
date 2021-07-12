@@ -77,7 +77,7 @@ $(function () {
 });
 
 //BURGER MENU 
-let burgerMenuButton = document.querySelector('.intro__burger-menu');
+const burgerMenuButton = document.querySelector('.intro__burger-menu');
 
 burgerMenuButton.onclick = function () {
   showMobileMenu();
@@ -86,16 +86,16 @@ burgerMenuButton.onclick = function () {
 function showMobileMenu () {
   burgerMenuButton.classList.toggle('active');
 
-  let mobileMenu = document.querySelector('.intro__mobile-menu');
+  const mobileMenu = document.querySelector('.intro__mobile-menu');
   mobileMenu.classList.toggle('active');
 
-  let body = document.querySelector('body');
+  const body = document.querySelector('body');
   body.classList.toggle('lock');
 }
 
 //COOKIES BTN
-let cookiesBlock = document.querySelector('.intro__cookies');
-let cookiesButton = document.querySelector('.intro__cookies-btn');
+const cookiesBlock = document.querySelector('.intro__cookies');
+const cookiesButton = document.querySelector('.intro__cookies-btn');
 
 cookiesButton.onclick = function () {
   cookiesBlock.style.display = 'none';
@@ -134,7 +134,7 @@ $(window).scroll(function() {
 });
 
 //100VH MOBILE FIX
-let vh = window.innerHeight * 0.01;
+const vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 window.addEventListener('resize', () => {
