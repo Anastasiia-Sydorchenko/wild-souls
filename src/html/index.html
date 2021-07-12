@@ -13,7 +13,9 @@
   <link rel="mask-icon" href="../images/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="../css/main.min.css" async>
+  <link rel="preload" href="./style.css" as="style">
+  <link rel="preload" href="./fonts/Roboto-Black.woff" as="font" type="font/woff" crossorigin>
+  <link async rel="stylesheet" href="../css/main.min.css">
 </head>
 
 <body>
@@ -40,7 +42,11 @@
           <a class="intro__menu-item" href="#">Cart (<span class="cart-counter">0</span>)</a>
         </div>
 
-        <a class="intro__menu-item intro__menu-item-lang mobile-hidden" href="#">En</a>
+        <div>
+          <a class="intro__menu-item-lang mobile-hidden" href="#">En</a>
+          <span class="mobile-hidden">/</span>
+          <a class="intro__menu-item-lang mobile-hidden" href="#">Uk</a>
+        </div>
 
         <!-- MOBILE MENU -->
         <div class="intro__burger-menu">
@@ -53,7 +59,11 @@
             <li class="mobile-menu__list-item"><a class="mobile-menu__list-item-link" href="#">Who we are</a></li>
             <li class="mobile-menu__list-item"><a class="mobile-menu__list-item-link" href="#">Store</a></li>
             <li class="mobile-menu__list-item"><a class="mobile-menu__list-item-link" href="#">Recipes</a></li>
-            <li class="mobile-menu__list-item"><a class="mobile-menu__list-item-link" href="#">En</a></li>
+            <li class="mobile-menu__list-item">
+              <a class="mobile-menu__list-item-link" href="#">En</a>
+              <span class="mobile-menu__list-item-link">/</span>
+              <a class="mobile-menu__list-item-link" href="#">Uk</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -977,7 +987,7 @@
 
   </footer>
 
-  <script src="../js/script.min.js" defer></script>
+  <script defer src="../js/script.min.js"></script>
 </body>
 
 </html>

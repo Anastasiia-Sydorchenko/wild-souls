@@ -70,7 +70,12 @@
       right: 0
 
   .intro__menu-item-lang
-    margin-right: 0
+    color: #000000
+    text-transform: uppercase
+    font-size: calc(13px + 2 *(100vw - 320px) / (1440 - 320))
+
+    &:hover
+      font-weight: 700
 
 // ===== MOBILE MENU ===================================
 .intro__burger-menu,
@@ -90,15 +95,15 @@
     list-style-type: none
     margin-bottom: 35px
 
-    .mobile-menu__list-item-link
-      text-decoration: none
-      color: #000000
-      font-size: calc(22px + 8 * ((100vw - 320px) / (767 - 320)))
-      font-weight: 700
+  .mobile-menu__list-item-link
+    text-decoration: none
+    color: #000000
+    font-size: calc(22px + 8 * ((100vw - 320px) / (767 - 320)))
+    font-weight: 700
 
-      &:hover
-        color: #ed7b49
-        transition: .35s
+    &:hover
+      color: #ed7b49
+      transition: .35s
 
 .intro__content
   overflow: hidden
@@ -154,21 +159,21 @@
     left: 50%
     transform: translate(-50%, 0)
 
-    .scroll-down-btn
-      display: flex
-      align-items: center
-      justify-content: center
-      background-color: #000000
-      border-radius: 50%
-      height: 80px
-      width: 80px
-      transition-duration: 0.3s
-      transition-property: transform
-      transform: translateZ(0)
-      box-shadow: 0 0 1px transparent
+  .scroll-down-btn
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #000000
+    border-radius: 50%
+    height: 80px
+    width: 80px
+    transition-duration: 0.3s
+    transition-property: transform
+    transform: translateZ(0)
+    box-shadow: 0 0 1px transparent
 
-      &:hover
-        transform: scale(1.1)
+    &:hover
+      transform: scale(1.1)
 
 // ===== NOTICE SECTION ===================================
 .notice-container
@@ -186,15 +191,15 @@
   .notice__img
     position: relative
 
-    .notice__img-inner
-      position: absolute
-      top: 50%
-      left: 50%
-      transform: translate(-50%, -50%)
-      text-align: center
-      font-family: 'Abril Fatface'
-      color: #ffffff
-      font-size: 75px
+  .notice__img-inner
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    text-align: center
+    font-family: 'Abril Fatface'
+    color: #ffffff
+    font-size: 75px
 
   .notice__info
     max-width: 500px
@@ -218,87 +223,87 @@
     display: block
     position: relative
 
-    .product-link
-      position: absolute
-      display: block
-      height: 100%
-      width: 100%
-      top: 0
-
     &:nth-child(odd)
       margin-top: 145px
 
-    .slide__img-wrapper
-      width: 100%
-      height: 530px
-      border-radius: 275px
-      display: flex
-      align-items: center
-      justify-content: center
+  .product-link
+    position: absolute
+    display: block
+    height: 100%
+    width: 100%
+    top: 0
 
-    .slide__img-wrapper-1
-      background-color: #72a080
+  .slide__img-wrapper
+    width: 100%
+    height: 530px
+    border-radius: 275px
+    display: flex
+    align-items: center
+    justify-content: center
 
-    .slide__img-wrapper-2
-      background-color: #a95d50
+  .slide__img-wrapper-1
+    background-color: #72a080
 
-    .slide__img-wrapper-3
-      background-color: #abafd6
+  .slide__img-wrapper-2
+    background-color: #a95d50
 
-    .slide__img-wrapper-4
-      background-color: #fecf6b
+  .slide__img-wrapper-3
+    background-color: #abafd6
 
-    .slide__info
-      height: 190px
-      width: 90%
-      position: absolute
-      top: 430px
-      display: flex
-      flex-direction: column
-      align-items: start
-      justify-content: center
+  .slide__img-wrapper-4
+    background-color: #fecf6b
 
-      .slide__info-title
-        font-size: calc(20px + 16 *(100vw - 320px) / (1440 - 320))
-        font-weight: 700
-        margin-bottom: 10px
-        color: #000000
+  .slide__info
+    height: 190px
+    width: 90%
+    position: absolute
+    top: 430px
+    display: flex
+    flex-direction: column
+    align-items: start
+    justify-content: center
 
-      .slide__info-price
-        display: block
-        font-size: calc(15px + 6 *(100vw - 320px) / (1440 - 320))
-        font-weight: 700
-        margin-bottom: 20px
-        color: #000000
+  .slide__info-title
+    font-size: calc(20px + 16 *(100vw - 320px) / (1440 - 320))
+    font-weight: 700
+    margin-bottom: 10px
+    color: #000000
 
-      .slide__info-btn
-        display: block
-        padding: 10px 45px
-        margin-left: 15px
-        text-transform: uppercase
-        color: #000000
-        font-size: calc(15px + 3 *(100vw - 320px) / (1440 - 320))
-        border-radius: 35px
-        cursor: pointer
-        transition-duration: 0.3s
-        transition-property: transform
-        transform: translateZ(0)
-        box-shadow: 0 0 1px transparent
+  .slide__info-price
+    display: block
+    font-size: calc(15px + 6 *(100vw - 320px) / (1440 - 320))
+    font-weight: 700
+    margin-bottom: 20px
+    color: #000000
 
-        &:hover
-          animation: buttonPulse 1s linear infinite
+  .slide__info-btn
+    display: block
+    padding: 10px 45px
+    margin-left: 15px
+    text-transform: uppercase
+    color: #000000
+    font-size: calc(15px + 3 *(100vw - 320px) / (1440 - 320))
+    border-radius: 35px
+    cursor: pointer
+    transition-duration: 0.3s
+    transition-property: transform
+    transform: translateZ(0)
+    box-shadow: 0 0 1px transparent
 
-      .slide__info-btn-1
-        background-color: #72a080
+    &:hover
+      animation: buttonPulse 1s linear infinite
 
-      .slide__info-btn-2
-        background-color: #a95d50
+  .slide__info-btn-1
+    background-color: #72a080
 
-      .slide__info-btn-3
-        background-color: #abafd6
+  .slide__info-btn-2
+    background-color: #a95d50
 
-      .slide__info-btn-4
-        background-color: #fecf6b
+  .slide__info-btn-3
+    background-color: #abafd6
+
+  .slide__info-btn-4
+    background-color: #fecf6b
 
 // ===== PHYLOSOPHY SECTION ===================================
 .philosophy-container
@@ -321,13 +326,13 @@
     padding-bottom: 65%
     animation: imgJump 1s linear alternate infinite
 
-    .philosophy__img
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      object-fit: contain
+  .philosophy__img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: contain
 
 // ===== PRODUCT CART (ALMOND) ===================================
 .product-card-container
@@ -359,21 +364,21 @@
     align-items: start
     width: 60%
 
-    .product-card__block-text
-      margin: 20px 0
-      width: 60%
+  .product-card__block-text
+    margin: 20px 0
+    width: 60%
 
-    .heading-3
-      margin-top: 40px
-      white-space: nowrap
+  .heading-3
+    margin-top: 40px
+    white-space: nowrap
 
-    .product-weight,
-    .product-price
-      display: inline-block
-      font-size: 21px
+  .product-weight,
+  .product-price
+    display: inline-block
+    font-size: 21px
 
-    .product-card__btn
-      margin-top: 45px
+  .product-card__btn
+    margin-top: 45px
 
   .product-card__block-img-wrapper
     position: absolute
@@ -381,15 +386,15 @@
     right: 35px
     width: 30%
 
-    .product-card__block-img
-      width: 100%
-      height: auto
+  .product-card__block-img
+    width: 100%
+    height: auto
 
-    .product-cart__block-img-hand
-      position: absolute
-      right: 0
-      bottom: 400px
-      animation: handMove 1s ease-in-out alternate infinite
+  .product-cart__block-img-hand
+    position: absolute
+    right: 0
+    bottom: 400px
+    animation: handMove 1s ease-in-out alternate infinite
 
 .product-card__nuts-list
   width: 20%
@@ -405,23 +410,23 @@
     list-style-type: none
     padding-left: 0
 
-    .nuts-list__item
-      display: block
-      padding-top: 40px
-      padding-bottom: 20px
-      font-size: calc(25px + 15 *(100vw - 320px) / (1440 - 320))
-      font-weight: 700
-      color: #000000
-      border-bottom: 1px solid #000000
+  .nuts-list__item
+    display: block
+    padding-top: 40px
+    padding-bottom: 20px
+    font-size: calc(25px + 15 *(100vw - 320px) / (1440 - 320))
+    font-weight: 700
+    color: #000000
+    border-bottom: 1px solid #000000
 
-      &:hover
-        color: #ffffff
-        transition: .3s
+    &:hover
+      color: #ffffff
+      transition: .3s
 
-      sup
-        font-size: calc(12px + 4 *(100vw - 320px) / (1440 - 320))
-        top: -25px
-        font-weight: 400
+    sup
+      font-size: calc(12px + 4 *(100vw - 320px) / (1440 - 320))
+      top: -25px
+      font-weight: 400
 
 // ===== PROCESS SLIDER ===================================
 .process-container
@@ -448,13 +453,13 @@
     text-align: center
     justify-content: space-between
 
-    .swiper-slide__block
-      width: 330px
+  .swiper-slide__block
+    width: 330px
 
-    .swiper-slide__title
-      font-size: 18px
-      font-weight: 700
-      margin: 25px 0
+  .swiper-slide__title
+    font-size: 18px
+    font-weight: 700
+    margin: 25px 0
 
   .swiper-pagination
     position: absolute
@@ -593,6 +598,9 @@
     left: 50%
     transform: translate(-50%,-50%)
 
+  .hand-img
+    width: max-content
+
 .treasures__info
   width: 50%
 
@@ -634,13 +642,13 @@
     text-align: center
     padding-bottom: 100%
 
-    .recipes__img
-      position: absolute
-      top: 0
-      left: 0
-      width: 80%
-      height: 100%
-      object-fit: contain
+  .recipes__img
+    position: absolute
+    top: 0
+    left: 0
+    width: 80%
+    height: 100%
+    object-fit: contain
 
   .swiper-slide
     color: #000000
@@ -648,19 +656,19 @@
     &:nth-child(even)
       margin-top: 50px
 
-    .recipe__note
-      display: block
-      margin-top: 40px
-      margin-bottom: 25px
-      text-transform: uppercase
-      font-size: calc(14px + 2 *(100vw - 320px) / (1440 - 320))
+  .recipe__note
+    display: block
+    margin-top: 40px
+    margin-bottom: 25px
+    text-transform: uppercase
+    font-size: calc(14px + 2 *(100vw - 320px) / (1440 - 320))
 
-    .recipe__name
-      font-size: calc(25px + 17 *(100vw - 320px) / (1440 - 320))
-      font-weight: 700
+  .recipe__name
+    font-size: calc(25px + 17 *(100vw - 320px) / (1440 - 320))
+    font-weight: 700
 
-      &:hover
-        color: #00000095
+    &:hover
+      color: #00000095
 
 // ===== FOOTER ===================================
 .footer-container
@@ -828,6 +836,9 @@
 
 //MEDIA QUERIES  
 @media (min-width: 1800px)
+  .products-slider .swiper-slide .slide__info
+    height: 250px
+
   .img-rotate
     width: 300px
     height: 300px
@@ -844,7 +855,7 @@
   .products-card-2 .product-card-2__block
     padding: 50px 40px 50px 100px
 
-  .product-card__nuts-list 
+  .product-card__nuts-list
     .product-card__nuts-list-call
       margin-bottom: 0
 
@@ -855,16 +866,15 @@
 
   //PRODUCTS SLIDER
   #products-slider
-    .swiper-slide
-      .slide__info
-        top: 300px
+    .slide__info
+      top: 300px
 
-      .slide__img-wrapper
-        height: 350px
-        width: 230px
+    .slide__img-wrapper
+      height: 350px
+      width: 230px
 
-        .slide__img
-          width: 250px
+    .slide__img
+      width: 250px
 
   .products-container
     padding-bottom: 200px
@@ -912,12 +922,11 @@
     margin: 0 20px
     max-width: 650px
 
-    .notice__img
-      .notice__img-inner
-        font-size: calc(30px + 35 * ((100vw - 320px)/ (1440 - 320)))
+  .notice__img-inner
+    font-size: calc(30px + 35 * ((100vw - 320px)/ (1440 - 320)))
 
   //PRODUCTS SLIDER
-  #products-slider
+  .products-slider
     .swiper-slide
       &:nth-child(odd)
         margin-top: 100px
@@ -932,12 +941,11 @@
     .product-card__block-info
       width: 100%
 
-    .product-card__block-img-wrapper
-      .product-card__block-img
-        display: none
+    .product-card__block-img
+      display: none
 
-      .product-cart__block-img-hand
-        bottom: 170px
+    .product-cart__block-img-hand
+      bottom: 170px
 
   .product-card__nuts-list
     width: 30%
@@ -948,10 +956,10 @@
       margin-bottom: 0
 
   //PRODUCT CARD 2 SECTION (HALVA)
-  .products-card-2 
+  .products-card-2
     .product-card-2__img-wrapper
       display: none
-    
+
     .product-card-2__block
       padding: 50px
       width: 50%
@@ -970,7 +978,7 @@
 
   .notice
     max-width: 650px
-    
+
   .intro__content
     .intro__heading
       padding-top: 30px
@@ -978,10 +986,9 @@
     .intro__cookies
       display: none
 
-    .scroll-down-btn-wrapper
-      .scroll-down-btn
-        height: 60px
-        width: 60px
+    .scroll-down-btn
+      height: 60px
+      width: 60px
 
   .intro__menu
     display: flex
@@ -1078,7 +1085,6 @@
   //PRODUCTS SLIDER
   .products-slider
     .swiper-slide
-
       &:nth-child(odd)
         margin-top: 80px
 
@@ -1098,18 +1104,16 @@
   .product-card__block
     width: 100%
 
-    .product-card__block-img-wrapper
-      .product-cart__block-img-hand
-        width: 40px
+    .product-cart__block-img-hand
+      width: 40px
 
   .product-card__nuts-list
     width: 80%
     text-align: center
     margin-top: 50px
 
-    .nuts-list__block
-      .nuts-list__item
-        display: inline-block
+    .nuts-list__item
+      display: inline-block
 
   //PROCESS SLIDER
   .process-slider
@@ -1214,11 +1218,10 @@
   .product-card__block .product-card__block-info .heading-3
     margin-top: 0
 
-  .product-card__nuts-list 
-    .nuts-list__block 
-      .nuts-list__item
-        padding-top: 20px
-        padding-bottom: 10px
+  .product-card__nuts-list
+    .nuts-list__item
+      padding-top: 20px
+      padding-bottom: 10px
 
   //PRODUCT CARD 2 SECTION (HALVA)
   .products-card-2 .product-card-2__subheading
@@ -1230,10 +1233,10 @@
     .gift-card__title
       margin-top: 0
       margin-bottom: 15px
-    
+
   .gift-card__img-icon
     width: 100px
-  
+
   //PROCESS SLIDER
   .process-container
     display: none
@@ -1269,8 +1272,8 @@
   .recipes-container
     padding: 30px 0
 
-  .recipes-slider 
-    .swiper-slide 
+  .recipes-slider
+    .swiper-slide
       display: flex
       flex-direction: column
       align-items: center
@@ -1278,11 +1281,11 @@
       .recipe__note
         margin: 10px 0
 
-    .recipes__img-wrapper
-      padding-bottom: 60%
+  .recipes__img-wrapper
+    padding-bottom: 60%
 
-      .recipes__img
-        width: 100%
+    .recipes__img
+      width: 100%
 
   //FOOTER
   .footer__logo
@@ -1312,15 +1315,14 @@
 
   //PRODUCTS SLIDER
   .products-container
-    padding-bottom: 100px
+    padding-bottom: 150px
 
   .products-slider
-    .swiper-slide
-      .slide__info
-        top: 250px
+    .slide__info
+      top: 250px
 
-      &:nth-child(odd)
-        margin-top: 0
+    &:nth-child(odd)
+      margin-top: 0
 
   //PRODUCT CARD 2 SECTION (HALVA)
   .product-card__block,
